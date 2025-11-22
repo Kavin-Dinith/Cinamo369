@@ -8,6 +8,12 @@
     font-family: "Inter", sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #fff;
     color: #333;
@@ -68,7 +74,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Mobile menu */
 .menu-btn {
     display: none;
     font-size: 2rem;
@@ -80,18 +85,30 @@ nav a:hover {
 /* HERO SECTION */
 /* --------------------------------------------- */
 .hero {
-    height: 85vh;
+    height: 89vh; /* full viewport */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
     color: white;
     position: relative;
     overflow: hidden;
+    padding: 20px;
 }
 
-/* Background image applied from HTML */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('your-hero-image.jpg'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.85);
+    animation: zoom 22s ease-in-out infinite;
+}
+
 .hero-content {
     animation: fadeIn 1.2s ease-out forwards;
     opacity: 0;
@@ -110,19 +127,6 @@ nav a:hover {
     font-size: 1.4rem;
     opacity: 0.9;
     text-shadow: 0px 0px 12px rgba(0,0,0,0.7);
-}
-
-/* Hero cinematic zoom animation */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    animation: zoom 22s ease-in-out infinite;
-    filter: brightness(0.85);
 }
 
 /* --------------------------------------------- */
