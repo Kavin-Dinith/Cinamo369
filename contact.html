@@ -5,7 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | CINAMO 369</title>
 <link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+<script>
+    function sendWhatsAppMessage() {
+        const name = document.getElementById("name").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const phone = "94770003690"; // WhatsApp number (no + or spaces)
+
+        let autoMessage = `Hello, my name is ${name}.%0A%0A${message}%0A%0A— Sent from CINAMO 369 website`;
+
+        const url = `https://wa.me/${phone}?text=${autoMessage}`;
+
+        window.open(url, "_blank");
+    }
+</script>
 </head>
 
 <body>
@@ -27,24 +40,21 @@
 <section class="section">
     <h2 class="section-title">Contact the Seller</h2>
 
-    <form>
+    <form onsubmit="event.preventDefault(); sendWhatsAppMessage();">
         <label>Name</label>
-        <input type="text" placeholder="Your name" required>
-
-        <label>Email</label>
-        <input type="email" placeholder="Your email" required>
+        <input id="name" type="text" placeholder="Your name" required>
 
         <label>Message</label>
-        <textarea rows="5" placeholder="Your message..."></textarea>
+        <textarea id="message" rows="5" placeholder="Your message..." required></textarea>
 
-        <button>Send Message</button>
+        <button type="submit">Send via WhatsApp</button>
     </form>
 
     <br><br>
 
     <h3 style="text-align:center;color:#8A4B2A;">Business Contact Details</h3>
     <p style="text-align:center;">
-        📞 Phone: +94 77 000 3690 <br>
+        📞 WhatsApp: +94 77 000 3690 <br>
         📧 Email: info@cinamo369.com <br>
         📍 Sri Lanka
     </p>
