@@ -65,14 +65,15 @@ nav a:hover{
 
 /* Hero section */
 .hero{
-    background:url('photos/c1.jpg') center/cover no-repeat;
-    height:85vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
+    background: url('https://www.pexels.com/photo/selective-focus-photography-of-cinnamon-301669/') 
+                center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
 .hero h1{
