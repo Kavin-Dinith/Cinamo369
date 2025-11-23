@@ -1,5 +1,23 @@
-.products-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px;}
-.card {background:white; padding:20px; border-radius:18px; box-shadow:0 4px 18px rgba(0,0,0,0.12);}
-.card:hover {transform:translateY(-6px) scale(1.03);}
-.card img {width:100%; border-radius:12px; margin-bottom:15px;}
-.card h3 {color: var(--primary-color); margin-bottom:10px;}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
